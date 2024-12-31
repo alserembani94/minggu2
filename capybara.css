@@ -1,0 +1,113 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: bisque; */
+  gap: 10px;
+  justify-content: center;
+  align-items: baseline;
+  height: 300px;
+}
+
+.child {
+  width: 100px;
+  border: 1px solid red;
+}
+
+.box {
+  display: flex;
+  background-color: palegreen;
+}
+
+.box-child {
+  border: 1px solid black;
+  height: 500px;
+  font-size: 2.5rem;
+  /* flex-basis: 100px;
+  flex-grow: 1; */
+}
+
+#box-3 {
+  order: -1;
+}
+
+/* #box-1 {
+  flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#box-2 {
+  flex-basis: 200px;
+  flex-grow: 2;
+  flex-shrink: 2;
+} */
+
+.container {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.baris {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.card {
+  background-color: #555555;
+}

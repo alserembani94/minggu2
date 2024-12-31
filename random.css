@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.mak-ayah {
+  --box-min-width: 350px;
+  --box-gap: 16px;
+  --parent-padding: 16px;
+  --column: 3;
+
+  background-color: purple;
+  padding: var(--parent-padding);
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  gap: var(--box-gap);
+  flex-wrap: wrap;
+
+  max-width: calc(var(--box-min-width) * var(--column) + var(--box-gap) * calc(var(--column) - 1) + var(--parent-padding) * 2);
+}
+
+.card {
+  background-color: burlywood;
+  flex: 1;
+  min-width: var(--box-min-width);
+  height: 300px;
+}
